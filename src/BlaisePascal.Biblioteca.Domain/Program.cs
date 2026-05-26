@@ -313,7 +313,26 @@ namespace BlaisePascal.Biblioteca.Domain
                 }
             }
 
-            
+            // ── 7. Info biblioteca ─────────────────────────────────────────
+            static void MostraInfoBiblioteca()
+            {
+                Console.Clear();
+                Console.WriteLine("=== INFO BIBLIOTECA ===\n");
+
+                if (biblioteca == null)
+                {
+                    Console.WriteLine("⚠ Devi prima creare una biblioteca (opzione 1).");
+                    Pausa();
+                    return;
+                }
+
+                Console.WriteLine($"  Nome:     {biblioteca.Nome}");
+                Console.WriteLine($"  Indirizzo: {biblioteca.Indirizzo}");
+                Console.WriteLine($"  Apertura: {biblioteca.OrarioApertura}");
+                Console.WriteLine($"  Chiusura: {biblioteca.OrarioChiusura}");
+                Console.WriteLine($"  Libri:    {biblioteca.NumeroLibri()}");
+                Pausa();
+            }
 
             // ── Helper: inserimento libro da console ───────────────────────
             static Libro InserisciLibro()
