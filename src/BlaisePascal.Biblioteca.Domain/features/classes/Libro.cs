@@ -8,11 +8,11 @@ namespace BlaisePascal.Biblioteca.Domain.features.classes
 {
     public class Libro
     {
-        private string Autore { set; get; }
-        private string Titolo { set; get; }
-        private int AnnoPubblicazione { set; get; }
-        private string Editore { set; get; }
-        private int NumeroPagine { set; get; }
+        public string Autore { set; get; }
+        public string Titolo { set; get; }
+        public int AnnoPubblicazione { set; get; }
+        public string Editore { set; get; }
+        public int NumeroPagine { set; get; }
 
         public Libro(string autore, string titolo, int annoPubblicazione, string editore, int numeroPagine)
         {

@@ -8,11 +8,11 @@ namespace BlaisePascal.Biblioteca.Domain.features.classes
 {
     public class Biblioteca
     {
-        private string Nome { set; get; }
-        private string Indirizzo { set; get; }
-        private string OrarioApertura { set; get; }
-        private string OrarioChiusura { set; get; }
-        private List<Libro> Libri { set; get; }
+        public string Nome { set; get; }
+        public string Indirizzo { set; get; }
+        public string OrarioApertura { set; get; }
+        public string OrarioChiusura { set; get; }
+        public List<Libro> Libri { set; get; }
 
         public Biblioteca(string nome, string indirizzo, string orarioApertura, string orarioChiusura)
         {
@@ -30,7 +30,7 @@ namespace BlaisePascal.Biblioteca.Domain.features.classes
 
         public Libro RicercaPerTitolo(string titolo)
         {
-            foreach (Libro l in libri)
+            foreach (Libro l in Libri)
             {
                 if (l.Titolo.Equals(titolo, StringComparison.OrdinalIgnoreCase))
                     return l;
@@ -42,7 +42,7 @@ namespace BlaisePascal.Biblioteca.Domain.features.classes
         public List<Libro> RicercaPerAutore(string autore)
         {
             List<Libro> risultati = new List<Libro>();
-            foreach (Libro l in libri)
+            foreach (Libro l in Libri)
             {
                 if (l.Autore.Equals(autore, StringComparison.OrdinalIgnoreCase))
                     risultati.Add(l);
